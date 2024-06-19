@@ -3,7 +3,6 @@
 import User from '#models/user'
 import UrlService from '#services/url_service';
 
-import { HttpContext } from "@adonisjs/core/http";
 
 export default class UsersController {
   async index({ params }: any) {

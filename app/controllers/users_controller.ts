@@ -31,14 +31,14 @@ export default class UsersController {
     ]
   }
 
-  public async shorten({ request }: HttpContextContract) {
+  public async shorten({ request }: any) {
     // const fullUrl = request.body()
     const fullUrl = request.input('url')
     const shortUrl = await UrlService.shortenUrl(fullUrl)
     return { short_url: shortUrl }
   }
 
-  public async redirect({ params, response }: HttpContextContract ) {
+  public async redirect({ params, response }: any ) {
     const identifier = params.identifier
     const fullUrl = await UrlService.getFullUrl(identifier)
     if (fullUrl) {

@@ -20,4 +20,5 @@ router.get('/user/:id', [UsersController, 'index']);
 router.post('/user-post', [UsersController, 'create']);
 router.post('/shorten', [UsersController, 'shorten']);
 router.get('/url/:identifier', [UsersController, 'redirect']);
+router.get('/all-url', [UsersController, 'getAllUrl']);
 

@@ -30,6 +30,12 @@ export default class UsersController {
     ]
   }
 
+  public async getAllUrl() {
+    const allUrls = await UrlService.getAllUrl(); // Call the method correctly
+    return { all_url: allUrls };
+  }
+
+
   public async shorten({ request }: any) {
     // const fullUrl = request.body()
     const fullUrl = request.input('url')
